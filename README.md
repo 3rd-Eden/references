@@ -1,8 +1,14 @@
 # references
 
-The `references` library allows you to create named references which allows you
-to easily track multiple references from a single location. You can use
-one instance to manage all references, or even
+`references` is a replacement of the `React.createRef` method which (ab)uses
+the same internal data structure to store all of the references in a single
+location. This allows for some pretty unique uses:
+
+- **testing** You can look-up any of the references that you created in the
+  component tree and perform assertions on them.
+- **complex components** It's not uncommon that you need to add more than one
+  reference to your render tree. You can now manage these from a single
+  location.
 
 ## Installation
 
